@@ -27,13 +27,15 @@ Use this debugging method:
 
 ## Setup
 
+* Get the code and install the gems
+
 ```
-git clone https://github.com/sjmog/bookmark_manager_2
-cd bookmark_manager_2
+git clone git@github.com:EdwardAndress/DebugBookmarkManager.git
+cd DebugBookmarkManager
 bundle install
 ```
 
-This will give you the application.
+* Set up the database
 
 ```
 psql
@@ -45,8 +47,6 @@ CREATE DATABASE debug_bookmark_manager_test;
 CREATE TABLE bookmarks(id SERIAL PRIMARY KEY, title VARCHAR(60), url VARCHAR(60));
 ```
 
-This will give you the databases required to pass the tests.
-
 ## Run the tests
 
 - Run the tests with `rspec`.
@@ -54,5 +54,3 @@ This will give you the databases required to pass the tests.
 ## Run the app
 
 - Run the app with `shotgun`.  This will automatically reload your changes so you don't need to restart your server on each code change.
-
-- Browse the app at the URL in your server logs.
